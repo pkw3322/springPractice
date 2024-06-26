@@ -2,9 +2,9 @@ package com.example.webpractice.service;
 
 import com.example.webpractice.domain.Member;
 import com.example.webpractice.repository.MemberRepository;
-import com.example.webpractice.repository.MemoryMemberRepository;
 import java.util.List;
 import java.util.Optional;
+
 public class MemberService {
   private final MemberRepository memberRepository;
 
