@@ -2,9 +2,12 @@ package com.example.basic.member;
 
 public class MemberServiceImpl implements MemberService{
 
-  // DIP, OCP 위반
-  // new MemoryMemberRepository()를 직접 호출하고 있다.
-  private final MemberRepository memberRepository = new MemoryMemberRepository();
+  // DIP 지키게 됨.
+  private final MemberRepository memberRepository;
+
+  public MemberServiceImpl(MemberRepository memberRepository) {
+    this.memberRepository = memberRepository;
+  }
 
   @Override
   public void join(Member member) {
